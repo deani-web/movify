@@ -1,0 +1,40 @@
+name: movify
+description: A movie discovery app
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  http: ^1.1.0
+  shimmer: ^3.0.0
+  shared_preferences: ^2.5.5
+  cached_network_image: ^3.3.0
+  url_launcher: ^6.3.2
+  youtube_player_flutter: ^9.1.1 # Tambahan untuk memutar video langsung di aplikasi
+  intl: ^0.18.1
+  image_picker: ^1.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1 # Ditambahkan untuk otomatisasi generate ikon aplikasi
+
+# Konfigurasi generator ikon aplikasi Movify
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_logo.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  # Mendaftarkan folder aset agar gambar logo dibaca oleh sistem Flutter
+  assets:
+    - assets/images/
